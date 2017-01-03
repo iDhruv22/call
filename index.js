@@ -1,7 +1,8 @@
 var http = require('http');
 var https = require('https');
+var call = {};
 
-function call(options) {
+call.request = function(options) {
   try {
     return new Promise((resolve, reject) => {
       https.request(options, (res) => {
@@ -20,6 +21,18 @@ function call(options) {
         });
 
       }).end();
+    });
+  } catch (e) {
+    console.log(e.name, e.message);
+  }
+}
+
+call.parallel = function(listofpromises) {
+  try {
+    return new Promise((resolve, reject) => {
+      return Promise.all(listofpromises).then(result => {
+        resolve(result);
+      });
     });
   } catch (e) {
     console.log(e.name, e.message);
