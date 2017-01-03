@@ -16,15 +16,20 @@ __**Installation:**__
 __**Example:**__
 
 ```javascript
+
   var call = require('./index');
 
   async function makecall() {
-    var data = await call({
+
+    var options = {
       host: 'jsonplaceholder.typicode.com',
       path: "/posts/1"
-    });
+    };
+
+    var data = await call(options);
     console.log(data);
   }
 
   makecall();
+  
 ```
