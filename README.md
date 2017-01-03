@@ -22,7 +22,8 @@ __Single request:__
 
   async function makecall() {
 
-    // Same options those are being use in NodeJS http module - Refer link [options](https://nodejs.org/api/http.html#http_http_request_options_callback)
+    // Same options those are being use in NodeJS http module -
+    // Refer - http://nodejs.org/api/http.html#http_http_request_options_callback
     var options = {
       host: 'jsonplaceholder.typicode.com',
       path: "/posts/1"
