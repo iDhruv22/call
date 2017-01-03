@@ -58,7 +58,7 @@ __Parallel request:__
       })
     ];
 
-    var data = await call.parallel(requests);  // wait will aa requests completes
+    var data = await call.parallel(requests);  // wait till all requests completes
     console.log(data[0]);  // result of 1st request
     console.log(data[1]);  // result of 2nd request
     console.log(data[2]);  // result of 3nd request
