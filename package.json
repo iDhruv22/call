@@ -1,0 +1,16 @@
+{
+  "name": "koa2-app",
+  "private": true,
+  "version": "0.1.0",
+  "main": "bin/run",
+  "dependencies": {
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4"
+  },
+  "scripts": {
+    "start": "nodemon app.js --exec babel-node --presets es2015,stage-2"
+  }
+}
