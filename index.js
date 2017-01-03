@@ -1,11 +1,10 @@
 var http = require('http');
-var https = require('https');
 var call = {};
 
 call.request = function(options) {
   try {
     return new Promise((resolve, reject) => {
-      https.request(options, (res) => {
+      http.request(options, (res) => {
         var data = '';
 
         res.on('data', (chunk) => {
