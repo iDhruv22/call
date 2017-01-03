@@ -21,14 +21,16 @@ __Single request:__
   var call = require('./index');
 
   async function makecall() {
+
+    // Same options those are being use in NodeJS http module - Refer link [options](https://nodejs.org/api/http.html#http_http_request_options_callback)
     var options = {
       host: 'jsonplaceholder.typicode.com',
       path: "/posts/1"
     };
 
-    var data = await call.request(options);
+    var data = await call.request(options);  // wait will request completes
 
-    console.log(data);
+    console.log(data);  // result
   }
   makecall();
 
@@ -55,10 +57,10 @@ __Parallel request:__
       })
     ];
 
-    var data = await call.parallel(requests);
-    console.log(data[0]);
-    console.log(data[1]);
-    console.log(data[2]);
+    var data = await call.parallel(requests);  // wait will aa requests completes
+    console.log(data[0]);  // result of 1st request
+    console.log(data[1]);  // result of 2nd request
+    console.log(data[2]);  // result of 3nd request
   }
 
   makeParallelCalls();
