@@ -1,7 +1,7 @@
 CallJs for ES7 async and await
 ==============================
 
-This is the the wrapper on node js http module. The call function returns a promise object.
+This is the wrapper around node js http module, and the call function returns a promise object.
 
 __**Installation:**__
 
