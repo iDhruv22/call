@@ -25,8 +25,8 @@ __Single request:__
     // Same options those are being use in NodeJS http module -
     // Refer - http://nodejs.org/api/http.html#http_http_request_options_callback
     var options = {
-      host: 'jsonplaceholder.typicode.com',
-      path: "/posts/1"
+      host: "qrng.anu.edu.au",
+      path: "/API/jsonI.php?length=1&type=uint8"
     };
 
     var data = await call.request(options);  // wait till request completes
@@ -45,16 +45,16 @@ __Parallel request:__
   async function makeParallelCalls() {
     var requests = [
       call.request({
-        host: 'jsonplaceholder.typicode.com',
-        path: "/posts/1"
+        host: "qrng.anu.edu.au",
+        path: "/API/jsonI.php?length=1&type=uint8"
       }),
       call.request({
-        host: 'jsonplaceholder.typicode.com',
-        path: "/posts/2"
+        host: "qrng.anu.edu.au",
+        path: "/API/jsonI.php?length=1&type=uint8"
       }),
       call.request({
-        host: 'jsonplaceholder.typicode.com',
-        path: "/posts/3"
+        host: "qrng.anu.edu.au",
+        path: "/API/jsonI.php?length=1&type=uint8"
       })
     ];
 
