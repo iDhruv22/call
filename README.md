@@ -1,7 +1,7 @@
 CallJs for ES7 async and await
 ==============================
 
-This is the wrapper around node js http module, and the call function returns a promise object.
+This is the wrapper around node js http module, and the call function returns a promise object. In example you can see we can make http request with zero callback.
 
 __**Installation:**__
 
@@ -18,7 +18,7 @@ __Single request:__
 
 ```javascript
 
-  var call = require('./index');
+  var call = require('./call');
 
   async function makecall() {
 
@@ -29,7 +29,7 @@ __Single request:__
       path: "/posts/1"
     };
 
-    var data = await call.request(options);  // wait will request completes
+    var data = await call.request(options);  // wait till request completes
 
     console.log(data);  // result
   }
@@ -40,7 +40,7 @@ __Parallel request:__
 
 ```javascript
 
-  var call = require('./index');
+  var call = require('./call');
 
   async function makeParallelCalls() {
     var requests = [
@@ -58,7 +58,7 @@ __Parallel request:__
       })
     ];
 
-    var data = await call.parallel(requests);  // wait till all requests completes 
+    var data = await call.parallel(requests);  // wait till all requests completes
     console.log(data[0]);  // result of 1st request
     console.log(data[1]);  // result of 2nd request
     console.log(data[2]);  // result of 3nd request
