@@ -30,7 +30,7 @@ var call = {};
 call.request = function(options) {
 
   if (typeof options === 'undefined') {
-    throw new Error('Not valid options.')
+    throw new Error('Not valid options.');
   }
 
   // Same options those are being use in NodeJS http module -
@@ -66,6 +66,11 @@ call.request = function(options) {
 }
 
 call.parallel = function(listofpromises) {
+
+  if (Object.prototype.toString.call(variable) != '[object Array]') {
+    throw new Error('Not a valid array.');
+  }
+
   try {
     return new Promise((resolve, reject) => {
       return Promise.all(listofpromises).then(result => {
