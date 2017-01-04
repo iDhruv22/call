@@ -1,7 +1,7 @@
 CallJs for ES7 async and await
 ==============================
 
-This is the wrapper around node js http module, and the call function returns a promise object. In example you can see we can make http request with zero callback.
+This is the wrapper around the node js http module, and the call each function returns a promise object so those can fit with await. In example you can find we can make http request with zero callback.
 
 __**Installation:**__
 
